@@ -35,12 +35,12 @@ spec:
       pvcStrategy: per-user
       perWorkspaceStrategyPvcConfig:
         claimSize: 10Gi
-    trustedCerts:
-      gitTrustedCertsConfigMapName: ca-certs-merged
+    # trustedCerts:
+    #   gitTrustedCertsConfigMapName: ca-certs-merged
   gitServices:
     github:
-    - secretName: github-oauth-config
-      endpoint: https://github.com
+      - secretName: github-oauth-config
+        endpoint: https://github.com
   networking:
     auth:
       gateway:
@@ -53,4 +53,3 @@ spec:
           cookieExpireSeconds: 86400
         traefik:
           logLevel: INFO
-
