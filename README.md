@@ -16,7 +16,7 @@ GitOps manifest for an Internal Developer Platform built on OpenShift
 
    Note: By default, only the OpenShift user called `admin` has full ArgoCD privileges. You can adjust the list of user that should have full ArgoCD privileges on the cluster by editing `argocd/bootstrap/instance/gitops-admins-group.yaml`.
 
-4. Copy the file `argocd/platform-root.example.yaml` to `argocd/platform-root.yaml` and customize the configuration. (see [Configuration Guide](#configuration-guide)) 
+4. Copy the file `argocd/platform-root.example.yaml` to `argocd/platform-root.yaml` and customize the configuration. (see [Configuration Guide](#configuration-guide))
 
    Note: Since you will potentially configure sensitive values in `argocd/platform-root.yaml` like a Git token, etc., it is included in `.gitignore` so sensitive values are not accidentally pushed to the remote.
 
@@ -35,11 +35,11 @@ Below are the critical configuration parameters that require user-provided value
 |-----------------------|---------------------------------------------|-----------------------------------------|----------------------------------------------------------|
 | `clusterRouterDomain` | wildcard domain for the OpenShift Router    | `apps.example.cluster.com`              |                                                          |
 | `gitHost`             | GitHub service provider host                | `https://github.com`                    |                                                          |
-| `gitOrg`              | GitHub organization                         | `contract-first-idp`                    | e.g. your fork                                           |
+| `gitOrg`              | GitHub organization                         | `agiertli`                    | e.g. your fork                                           |
 | `gitRef`              | Git branch, tag, or commit                  | `main`                                  | e.g. your feature branch                                 |
 | `gitToken`            | Backstage GitHub authentication token       | `ghp_REPLACEME`                         | Settings -> Developer Settings -> Personal Access Tokens |
 | `eclipseClientId`     | Github registered DevSpaces AppID           | `devSpaceAppID`                         | Settings -> Developer Settings -> OAuth Apps             |
-| `eclipseClientSecret` | Github registered DevSpaces AppSecret       | `devSpaceAppSecret`                     | Settings -> Developer Settings -> OAuth Apps             |   
+| `eclipseClientSecret` | Github registered DevSpaces AppSecret       | `devSpaceAppSecret`                     | Settings -> Developer Settings -> OAuth Apps             |
 
 ## User Guide
 
@@ -61,9 +61,9 @@ Users:
 - `user-dev-1`
 - `user-dev-2`
 
-All users have an intial password set to: `letmein` 
+All users have an intial password set to: `letmein`
 
-### Setting config values for DevSpaces 
+### Setting config values for DevSpaces
 
 We need to setup Eclipse-che for installation. Bases on the git provider repo used, we can get the current certificate:
 
