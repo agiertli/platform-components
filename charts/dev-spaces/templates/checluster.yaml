@@ -37,10 +37,10 @@ spec:
         claimSize: 10Gi
     # trustedCerts:
     #   gitTrustedCertsConfigMapName: ca-certs-merged
-  gitServices:
-    github:
-      - secretName: github-oauth-config
-        endpoint: https://github.com
+  # gitServices:
+  #   github:
+  #     - secretName: github-oauth-config
+  #       endpoint: https://github.com
   networking:
     auth:
       gateway:
